@@ -13,4 +13,4 @@
 #   https://github.com/ansible/ansible/issues/15746
 # ('delegate_to' statement is evaluated before 'when')
 - include_tasks: config_ssh.yml
-  when: rsnapshot_master_host and rsnapshot_master_host_user
+  when: rsnapshot_master_host is defined and rsnapshot_master_host_user is defined

@@ -12,4 +12,4 @@
   authorized_key:
     user: "{{ rsnapshot_slave_user }}"
     key: "{{ rsnapshot_master_ssh_pubkey.stdout }}"
-  when: rsnapshot_master_ssh_pubkey
+  when: rsnapshot_master_ssh_pubkey is defined
